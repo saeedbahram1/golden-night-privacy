@@ -84,7 +84,8 @@ html[lang="en"] div[data-l="en"],html[lang="fa"] div[data-l="fa"]{display:block}
     <p>These are kept in Chrome's local extension storage (<code>chrome.storage.local</code>) on your own device. They are never sent anywhere and are removed when you uninstall the extension.</p></section>
 
   <section class="card"><h2><span class="n">3</span>What the extension does on web pages</h2>
-    <p>When turned on, the extension runs on the pages you open in order to apply a dark colour filter and keep photos and videos looking natural. To avoid darkening pages that are already dark, it checks the background colours of the visible parts of a page. This check happens locally in your browser. Page text, forms, passwords, cookies and page addresses are not read, stored or transmitted.</p></section>
+    <p>When turned on, the extension runs on the pages you open in order to apply a dark colour filter and keep photos and videos looking natural. To avoid darkening pages that are already dark, it checks the background colours of the visible parts of a page. This check happens locally in your browser. Page text, forms, passwords, cookies and page addresses are not read, stored or transmitted.</p>
+    <p>Chrome's own dark mode setting (<code>chrome://flags</code>) can already darken pages. So that pages are not darkened twice, the extension may briefly measure the overall brightness of the visible tab. The result is a single number computed in memory; the image is not saved, stored or transmitted anywhere.</p></section>
 
   <section class="card"><h2><span class="n">4</span>Network, analytics and third parties</h2>
     <p>The extension makes no network requests. It contains no analytics, advertising, trackers or third-party services, and it does not download or run remote code. All code is included in the extension package.</p></section>
@@ -92,7 +93,7 @@ html[lang="en"] div[data-l="en"],html[lang="fa"] div[data-l="fa"]{display:block}
   <section class="card"><h2><span class="n">5</span>Permissions explained</h2>
     <ul>
       <li><code>storage</code> — saves the two settings described above.</li>
-      <li>Access to all websites (content script on all URLs) — required so dark mode can work on any site you visit. No page data leaves your device.</li>
+      <li>Access to all websites (content script on all URLs) — required so dark mode can work on any site you visit, and so the extension can measure the brightness of the visible tab as described above. No page data leaves your device.</li>
       <li>No other permissions (such as tabs, history, cookies or downloads) are requested.</li>
     </ul>
     <p>The “Enable Chrome's own dark mode” button only opens <code>chrome://flags</code> in a new tab. It does not change any browser setting by itself.</p></section>
@@ -129,7 +130,8 @@ html[lang="en"] div[data-l="en"],html[lang="fa"] div[data-l="fa"]{display:block}
     <p>این تنظیمات در حافظه‌ی محلی افزونه‌های کروم (<code>chrome.storage.local</code>) روی دستگاه خودتان می‌مانند، هیچ‌جا ارسال نمی‌شوند و با حذف افزونه پاک می‌شوند.</p></section>
 
   <section class="card"><h2><span class="n">۳</span>افزونه روی صفحات وب چه می‌کند؟</h2>
-    <p>وقتی افزونه روشن باشد، روی صفحاتی که باز می‌کنید اجرا می‌شود تا یک فیلتر رنگی تیره اعمال کند و عکس‌ها و ویدیوها را طبیعی نگه دارد. برای اینکه صفحاتی را که از قبل تیره هستند دوباره تیره نکند، رنگ پس‌زمینه‌ی بخش‌های دیده‌شده‌ی صفحه را بررسی می‌کند. این بررسی کاملاً محلی و داخل مرورگر شما انجام می‌شود. متن صفحه، فرم‌ها، رمزها، کوکی‌ها و آدرس صفحات خوانده، ذخیره یا ارسال نمی‌شوند.</p></section>
+    <p>وقتی افزونه روشن باشد، روی صفحاتی که باز می‌کنید اجرا می‌شود تا یک فیلتر رنگی تیره اعمال کند و عکس‌ها و ویدیوها را طبیعی نگه دارد. برای اینکه صفحاتی را که از قبل تیره هستند دوباره تیره نکند، رنگ پس‌زمینه‌ی بخش‌های دیده‌شده‌ی صفحه را بررسی می‌کند. این بررسی کاملاً محلی و داخل مرورگر شما انجام می‌شود. متن صفحه، فرم‌ها، رمزها، کوکی‌ها و آدرس صفحات خوانده، ذخیره یا ارسال نمی‌شوند.</p>
+    <p>دارک مود داخلی کروم (<code>chrome://flags</code>) ممکن است صفحه‌ها را از قبل تیره کرده باشد. برای اینکه صفحه‌ها دو بار تیره نشوند، افزونه ممکن است برای لحظه‌ای روشنایی کلی تب قابل‌مشاهده را اندازه بگیرد. نتیجه فقط یک عدد است که داخل حافظه محاسبه می‌شود؛ تصویر ذخیره، نگهداری یا به جایی ارسال نمی‌شود.</p></section>
 
   <section class="card"><h2><span class="n">۴</span>شبکه، ابزارهای تحلیل و اشخاص ثالث</h2>
     <p>افزونه هیچ درخواست شبکه‌ای ارسال نمی‌کند. هیچ ابزار تحلیل (آنالیتیکس)، تبلیغات، ردیاب یا سرویس شخص ثالثی در آن وجود ندارد و کد از راه دور دانلود یا اجرا نمی‌کند. همه‌ی کدها داخل بسته‌ی افزونه هستند.</p></section>
@@ -137,7 +139,7 @@ html[lang="en"] div[data-l="en"],html[lang="fa"] div[data-l="fa"]{display:block}
   <section class="card"><h2><span class="n">۵</span>توضیح مجوزها</h2>
     <ul>
       <li><code>storage</code> — برای ذخیره‌ی دو تنظیم بالا.</li>
-      <li>دسترسی به همه‌ی وب‌سایت‌ها (اسکریپت محتوا روی همه‌ی آدرس‌ها) — برای اینکه دارک مود روی هر سایتی که باز می‌کنید کار کند. هیچ داده‌ای از صفحه از دستگاه شما خارج نمی‌شود.</li>
+      <li>دسترسی به همه‌ی وب‌سایت‌ها (اسکریپت محتوا روی همه‌ی آدرس‌ها) — برای اینکه دارک مود روی هر سایتی که باز می‌کنید کار کند و افزونه بتواند روشنایی تب قابل‌مشاهده را همان‌طور که بالا گفته شد اندازه بگیرد. هیچ داده‌ای از صفحه از دستگاه شما خارج نمی‌شود.</li>
       <li>هیچ مجوز دیگری (مثل تب‌ها، تاریخچه، کوکی‌ها یا دانلودها) درخواست نمی‌شود.</li>
     </ul>
     <p>دکمه‌ی «فعال‌سازی دارک مود خود کروم» فقط صفحه‌ی <code>chrome://flags</code> را در یک تب جدید باز می‌کند و خودش هیچ تنظیمی از مرورگر را تغییر نمی‌دهد.</p></section>
@@ -161,7 +163,7 @@ html[lang="en"] div[data-l="en"],html[lang="fa"] div[data-l="fa"]{display:block}
 <script>
 (function () {
   // >>> Replace this with your real contact email <<<
-  var CONTACT_EMAIL = "saeedbahra1@gmail.com";
+  var CONTACT_EMAIL = "YOUR_EMAIL@example.com";
 
   var KEY = "gn-privacy-lang";
   var titles = { en: "Privacy Policy — Golden Night", fa: "سیاست حریم خصوصی — شب طلایی" };
